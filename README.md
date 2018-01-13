@@ -1,4 +1,7 @@
 # pcap_obfuscator
+
+This is an old little program I wrote a while ago that takes a Wireshark PCAP file and anonymizes it. I called it the “PCAP obfuscator”. It uses a PyQT5 based GUI.
+
 Sometimes we need to share PCAP files with people without disclosing the IP addresses used within our private networks. This program can randomly change IP addresses, MAC addresses and VLAN IDs while keeping the coherence of the packet sequence. It may also modify IP addresses in the payloads of text-based protocols like HTTP or SIP.
 
 I must advise that it does not obfuscate addresses in ARP, DNS, DHCP and other protocols. My initial intent was to share Radius, Diameter, HTTP and SIP traces so I would always purge all of these ARP and DNS packets from the PCAP file using Wireshark before using this obfuscation tool. 
